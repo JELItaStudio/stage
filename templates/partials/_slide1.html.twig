@@ -1,0 +1,26 @@
+<!-- CAROUSEL: SLIDE 1 --> 
+
+<style>
+.shinning {
+  overflow: hidden;
+  background: linear-gradient(90deg, #262626, #fff, #6d2c38);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
+}
+
+.shinning:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+</style>

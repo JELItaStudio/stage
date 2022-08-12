@@ -1,0 +1,315 @@
+<!-- CAROUSEL: SLIDE 2 -->
+<div class="container-fluide">
+  <div class="row text-center">
+    <div class="col-6 offset-3 ">
+      <div class="wrapper text-center"> 
+        <div class="vitrine vitrine-slide2 text-center">
+          <span class="text-center"><a><img id="imga" src="{{asset('assets/img/carousel/a.png')}}" width="350px" height="271px" alt="lolipop"></a></span>
+          <span class="text-center"><a><img id="imgb" src="{{asset('assets/img/carousel/b.png')}}" width="208px" height="350px"alt="fleurs de bonbon"></a></span>
+          <span class="text-center"><a><img id="imgc" src="{{asset('assets/img/carousel/c.png')}}" width="283px" height="319px"alt="cones de bonbon"></a></span>
+          <span class="text-center"><a><img id="imgd" src="{{asset('assets/img/carousel/d.png')}}" width="305px" height="350px"alt="brochette de bonbon"></a></span>
+          <span class="text-center"><a><img id="imge" src="{{asset('assets/img/carousel/e.png')}}" width="288px" height="350px"alt="brochette de bonbon"></a></span>
+        </div>         
+        <div class="dropping-texts text-center" id="brochette-text">
+          <div id="loli" class="text-center"><a>LOLIPOPS</a></div>
+          <div id="fleurs" class="text-center"><a>FLEURS de BONBONS</a></div>
+          <div id="cones" class="text-center"><a>CONES de BONBONS</a></div>
+          <div class="brochettes" class="text-center"><a>BROCHETTES de BONBONS</a></div>
+          <div class="brochettes" class="text-center"><a>BROCHETTES de BONBONS</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* vitrine */
+  .wrapper {
+    padding-top: 80px;
+    position:relative;
+  }
+
+  .vitrine {
+    display: inline;
+  }
+
+  .vitrine-slide2 span {
+    position: absolute;
+    left: -100px;
+    opacity: 0;
+    overflow: hidden;
+    -webkit-animation: rotateWord 6s linear infinite 0s;
+    -ms-animation: rotateWord 6s linear infinite 0s;
+    animation: rotateWord 6s linear infinite 0s;
+  }
+
+  .vitrine-slide2 span:nth-child(2) {
+    -webkit-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+
+  .vitrine-slide2 span:nth-child(3) {
+    -webkit-animation-delay: 2s;
+    -ms-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+
+  .vitrine-slide2 span:nth-child(4) {
+    -webkit-animation-delay: 3s;
+    -ms-animation-delay: 3s;
+    animation-delay: 3s;
+  }
+
+  .vitrine-slide2 span:nth-child(5) {
+    -webkit-animation-delay: 4s;
+    -ms-animation-delay: 4s;
+    animation-delay: 4s;
+  }
+
+  @-webkit-keyframes rotateWord {
+    0% {
+      opacity: 0;
+    }
+    2% {
+      opacity: 0;
+      -webkit-transform: translateY(-30px);
+    }
+    5% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+    }
+    20% {
+      opacity: 0;
+      -webkit-transform: translateY(30px);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @-ms-keyframes rotateWord {
+    0% {
+      opacity: 0;
+    }
+    2% {
+      opacity: 0;
+      -ms-transform: translateY(-30px);
+    }
+    5% {
+      opacity: 1;
+      -ms-transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      -ms-transform: translateY(0px);
+    }
+    20% {
+      opacity: 0;
+      -ms-transform: translateY(30px);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes rotateWord {
+    0% {
+      opacity: 0;
+    }
+    2% {
+      opacity: 0;
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    5% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+    17% {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+    20% {
+      opacity: 0;
+      -webkit-transform: translateY(30px);
+      transform: translateY(30px);
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #imga {
+   margin-left: 20px;
+  }
+
+  #loli {
+    padding-left: 40px;
+  }
+
+  #imgb {
+    margin-left: 75px;
+  }
+
+  #fleur {
+    margin-left: -5px;
+  }
+
+  #imgc {
+    margin-left: 70px;
+  }
+
+  #cones {
+    padding-left: -5px;
+  }
+
+  #imgd {
+    margin-left: 50px;
+  }
+
+  #imge {
+    margin-left: 60px;
+  }
+
+  .brochettes {
+    padding-left: px;
+  }  
+
+  /* the end of "vitrine" */
+  /* dropping-text */
+  #brochette-text {
+    margin: 0px;
+    padding-top: 350px;
+    width:100%;
+    color: #d3929e;
+    font-family:'Roboto';
+    font-size: 20px;
+    font-weight: 100px;
+    overflow: hidden;
+  }
+
+  .dropping-texts {
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    vertical-align: -2px;
+  }
+
+  .dropping-texts > div {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    position:absolute;
+    font-weight:300 px;   
+    box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+  }
+
+  .dropping-texts > div:nth-child(1) {
+    animation: roll 6s linear infinite 0s;
+  }
+  .dropping-texts > div:nth-child(2) {
+    animation: roll 6s linear infinite 1s;
+  }
+  .dropping-texts > div:nth-child(3) {
+    animation: roll 6s linear infinite 2s;
+  }
+  .dropping-texts > div:nth-child(4) {
+    animation: roll2 6s linear infinite 3s;
+  }
+
+  @keyframes roll {
+    0% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(-25deg);
+    }
+    3% {
+      opacity:1;
+      transform: rotate(0deg);
+    }
+    5% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+    }
+    20% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+      transform: rotate(0deg);
+    }
+    27% {
+      font-size:0px;
+      opacity:0.5;
+      margin-left:20px;
+      margin-top:100px;
+    }
+    100% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(15deg);
+    }
+  }
+
+  @keyframes roll2 {
+    0% {
+      font-size:0px;
+      opacity:0;
+      margin-left:-30px;
+      margin-top:0px;
+      transform: rotate(-25deg);
+    }
+    3% {
+      opacity:1;
+      transform: rotate(0deg);
+    }
+    5% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+    }
+    30% {
+      font-size:inherit;
+      opacity:1;
+      margin-left:0px;
+      margin-top:0px;
+      transform: rotate(0deg);
+    }
+    37% {
+      font-size:1500px;
+      opacity:0;
+      margin-left:-1000px;
+      margin-top:-800px;
+    }
+    100% {
+      font-size:0px;
+      opacity:0;
+     
+      margin-top:0px;
+      transform: rotate(15deg);
+    }
+  }
+</style> 

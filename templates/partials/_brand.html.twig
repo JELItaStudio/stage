@@ -1,0 +1,92 @@
+<!-- SECTION 2: BRAND --> 
+<div class="container-fluid" id="section2">
+  <div class="row">
+    <div class="col-4 offset-4 text-center">
+      <!-- logo -->
+      <a class="navbar-brand" href="#">
+        <svg width="100%" height="70px">
+          <symbol id="text-copy">
+            <text text-anchor="middle" x="50%" y="80%" class="text--line">Lili'Sweet</text>
+          </symbol>
+          <g class="g-ants">
+            <use xlink:href="#text-copy" class="text-copy" id="outline"></use>
+            <use xlink:href="#text-copy" class="text-copy" id="fill"></use> 
+          </g>
+        </svg>
+      </a>
+      <p class="fade-in-fade-out">Confiserie Halal</p>
+    </div><!-- end : .col-4 offset-4 -->
+  </div><!-- end : .row -->
+</div><!-- end : #section2 -->
+
+<style> 
+  #section2 {
+    position:relative;
+    top:0px;
+    background-color: #f8edef;
+    width: 100%;
+    height: 125px;
+    padding-top: 10px;
+  }
+
+  /* logo */
+  .text--line {
+    font-size:61px;
+    font-family: 'Great Vibes', cursive;
+    font-weight:590;
+  }
+
+  #outline {
+    fill: none;
+    stroke:#bd5b6e;
+    stroke-dasharray:100%;
+    stroke-dashoffset:0;
+    animation-name: outline;
+    animation-duration: 15s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+
+  #fill {
+    fill-opacity: 0;
+    fill:#e9c8cf;
+    animation-name: fill;
+    animation-duration: 16s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes outline {
+    from{
+      stroke-dashoffset:100%;
+    }
+    to{
+      stroke-dashoffset:0;
+    }
+  }
+
+  @keyframes fill {
+    from{
+      fill-opacity: 0;
+    }
+    to{
+      fill-opacity: 1;
+    }
+  }
+
+  /* slogan */
+  @keyframes fade-inout {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+  }
+
+  .fade-in-fade-out {
+    animation: fade-inout 6s infinite alternate;
+    font-family: 'Poiret One', cursive; font-size: 20px; font-weight: bold; color:#bd5b6e;
+    text-align:center;
+  }
+</style> 

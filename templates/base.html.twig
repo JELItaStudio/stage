@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+  <html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="confiserie, halal, lili-sweet">
+      <meta name="generator" content="Hugo 0.88.1">
+
+      <title>{% block title %}{% endblock %}</title>
+
+      <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        
+      <!-- Google fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:wght@100&family=Roboto+Mono:wght@100&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+      <!-- bootstrap core css v5.1.3 -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     
+      <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css.map')}}" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+      <!-- bootstrap carousel css -->
+      <link href="{{asset('assets/css/carousel.css')}}" rel="stylesheet">
+
+      <!-- custom styles -->
+      <link href="{{asset('assets/css/custom.css')}}" rel="stylesheet">
+
+    </head>
+    <body>
+
+      <!-- HEADER -->
+      {% block header %}
+        <div id="section1">
+          <div class="container-fluid px-0 pb-0" id="trans">
+            {% include 'partials/_header.html.twig' %}
+
+            <!-- reseaux sociaux, annonces, contact -->
+            <div class="row px-4 py-0 justify-content-between">
+
+              <!-- whatsapp, no phone -->
+              <div class="col-4 px-5">
+                <ul class="nav">
+                  <!-- wa -->
+                  <li class="nav-item">
+                    <a class="nav-link" id="whatsapp" href="https://wa.me/0033749973533" target="_blank">
+                      <img id="wa" src={{asset('assets/img/wa.svg')}} width="20px"  height="20px" onmouseover="setWA20(), windowWA()" onmouseout="setWA()"/>
+                        <script type="text/javascript">
+                          function setWA20() {
+                            document.getElementById("wa").src="{{asset('assets/img/wa20.svg')}}";
+                          }
+                          function setWA() {
+                            document.getElementById("wa").src="{{asset('assets/img/wa.svg')}}";
+                          }
+                          function windowWA() { 
+                            window.open("https://wa.me/0033749973533", "_blank","toolbar=yes, scrollbars=yes, resizable=yes, top = 100px, left=400px, width=500, height=600"); 
+                          }
+                        </script>
+                    </a>
+                  </li><!-- end: wa -->
+                  <!-- phone -->
+                  <li class="nav-item">
+                    <a class="nav-link"  id="smartphone" href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                        <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+                        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                      </svg>
+                      <span id="no">07 49 97 35 33</span>
+                    </a>
+                  </li>
+                </ul>
+              </div><!-- end: phone -->
+
+              <!-- annonces -->
+              {% if block('annonces') is defined %}
+                <div class="col-5 mt-1" id="annonces"><marquee direction = "right">"<span id="ann_offert">2 achetés + 1 offert</span>, <span id="ann_article">gateau de bonbon</span>: -45% <span class="mistral" id="ann_date">du</span> 02/06 <span class="mistral" id="ann_date">jusqu'au</span> 22/06"</marquee></div><!-- the end of col-5 (annonces) -->
+              {% endif %}
+     
+              <div class="col-1"></div>
+
+              <div class="col-2">
+                <ul class="nav">
+                  <!-- facebook -->
+                  <li class="nav-item ps-2">
+                    <a class="nav-link px-2"  id="facebook" href="https://www.facebook.com/profile.php?id=100008045179197" target="_blank">
+                      <img id="fb" src={{asset('assets/img/fb.svg')}} width="20px" height="20px" 
+                        onmouseover="setFB20(), windowFB()" onmouseout="setFB()"/>
+                        <script type="text/javascript">
+                          function setFB20() {
+                            document.getElementById("fb").src="{{asset('assets/img/fb20.svg')}}";
+                          }
+                          function setFB() {
+                            document.getElementById("fb").src="{{asset('assets/img/fb.svg')}}";
+                          }
+                          function windowFB() { 
+                            window.open("https://www.facebook.com/profile.php?id=100008045179197", "_blank","toolbar=yes, scrollbars=yes, resizable=yes, top = 100px, left=400px, width=500, height=600"); 
+                          }
+                        </script>
+                    </a>
+                  </li><!-- end : fb) -->
+                  <!-- instagram -->
+                  <li class="nav-item pe-4">
+                    <a class="nav-link px-2"  id="instagram" href="https://www.instagram.com/lilisweetbis/?hl=fr" target="_blank">
+                      <img id="insta" src={{asset('assets/img/insta.svg')}} width="18px"  height="18px" onmouseover="setINSTA20(), windowINSTA()" onmouseout="setINSTA()"/>
+                        <script type="text/javascript">
+                          function setINSTA20() {
+                            document.getElementById("insta").src="{{asset('assets/img/insta20.svg')}}";
+                          }
+                          function setINSTA() {
+                            document.getElementById("insta").src="{{asset('assets/img/insta.svg')}}";
+                          }
+                          function windowINSTA() { 
+                            window.open("https://www.instagram.com/lilisweetbis/?hl=fr", "_blank","toolbar=yes, scrollbars=yes, resizable=yes, top = 100px, left=400px, width=500, height=600"); 
+                          }
+                        </script>
+                    </a>
+                  </li> <!-- end : instagram) -->
+                  <!-- contact : cs at www.lili-sweet.com -->
+                  <li class="nav-item text-end">
+                    <a class="nav-link px-2" id="contact" href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                      </svg>
+                    </a>
+                  </li><!-- end : contact -->
+                </ul>
+              </div>
+
+            </div><!-- end : row "reseaux sociaux, annonces, contact" -->
+          </div><!-- end : container, #trans -->
+        </div><!-- end : #section1 -->
+      {% endblock %}
+
+      <!-- BRAND -->
+      {% block brand %}{% include 'partials/_brand.html.twig' %}{% endblock %} 
+
+      <!-- NAVBAR -->
+      {% if block('navbar') is defined %}{% include 'partials/_navbar.html.twig' %}{% endif %}
+
+      <!-- CAROUSEL -->
+      {% if block('carousel') is defined %}
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <!-- carousel-indicators -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div><!-- end : .carousel-indicators -->
+          <!-- slide -->
+          <div class="carousel-inner">
+            <!-- slide 1 -->
+            <div class="carousel-item active" data-interval="100">
+              <div class="carousel-caption">
+                <div class="container">
+                  <div class="row">
+                    <!-- col 1.1, slide 1 -->
+                    <div class="col-3">
+                      <table style="height: 450px;">
+                        <tbody>
+                          <tr>
+                            <td class="align-middle me-0 w3-animate-left fade-in" style="transition:2s;">
+                              <h2 style="color:red;" >Sans Gélatine de Porc</h1>
+                              <p style="color:red;" >-45%</p>
+                              <a><button type="button" class="btn btn-outline-danger">Catalogue</button></a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- end : col 1.1, slide 1 -->
+                    <!-- col 1.2, slide 1 -->
+                    <div class="col-6 w3-animate-top" id="slide1">
+                    <img src="{{asset('assets/img/carousel/1.png')}}" width="315px" height="450px"alt="gateau de bonbons" style="padding-top:20px">
+                    </div><!-- end : col 1.2, slide 1 -->
+                    <!-- col 1.3, slide 1 -->
+                    <div class="col-3">
+                      <table height="349.5px">
+                        <tbody>
+                          <tr>
+                            <td class="align-bottom w3-animate-right  pt-5" height="255px">
+                              <img src="{{asset('assets/img/carousel/halal.png')}}" width="50px" height="50px"alt="halal">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="align-bottom w3-animate-right">
+                              {% block slide1 %}{% include 'partials/_slide1.html.twig' %}{% endblock %}
+                              <p class="pb-4"><a class="shinning"><button type="button" class="btn btn-outline-danger">Acheter</button></a></p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div><!-- end : col 1.3, slide 1 -->
+                  </div><!-- end : row -->
+                </div><!-- end : container -->
+              </div><!-- end : carousel-caption 1 -->
+            </div><!-- end : slide 1 -->
+            <!-- slide 2 -->
+            <div class="carousel-item">
+              <div class="carousel-caption" >
+                <div class="container">
+                  <div class="row ">
+                    <!-- col 2.1, slide 2 -->
+                    <div class="col-3" >
+                      <div class="move">
+                        <img src="{{asset('assets/img/carousel/stars-s.png')}}" alt="stars" id="stars1">
+                      </div><!-- end : slide 2 -->
+                    </div><!-- end : col 2.1, slide 2 -->
+                    <!-- col 2.2, slide 2 -->
+                    <div class="col-6 text-center">
+                      {% block slide2 %}{% include 'partials/_slide2.html.twig' %}{% endblock %}
+                    </div><!-- end : col 2.2, slide 2 -->
+                    <!-- col 2.3, slide 2 -->
+                    <div class="col-3">
+                      <div>
+                        <img src="{{asset('assets/img/carousel/stars.png')}}" alt="stars">
+                      </div>
+                    </div><!-- end : col 2.3, slide 2 -->
+                  </div><!-- end : .row, slide 2 -->
+                </div><!-- end : .container, slide 2 -->
+              </div><!-- end : .carousel-caption, slide 2 -->
+            </div><!-- end : slide 2 -->
+            <!-- slide 3 -->
+            <div class="carousel-item">
+              <div class="carousel-caption" >
+                {% block slide3 %}{% include 'partials/_slide3.html.twig' %}{% endblock %}
+              </div><!-- end : .carousel-caption, slide 3 -->
+            </div><!-- end : slide 3 -->
+          </div><!-- end : slides 1, 2, 3 -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div><!-- the end of carousel -->
+      {% endif %}
+
+      <!-- MARKETING -->
+      <div class="container marketing {% if block('carousel') is defined %}mt-5{% endif %}">
+        <!-- "Marketing Features" -->
+        {% block body %}{% endblock %}
+      </div><!-- the end of "Marketing Features" -->
+
+      <!-- SECTION9 -->
+      {% if block('section9') is defined %}
+        <div class="container-fluide" id="section9">
+          <h2 class="ps-3 pt-3">Lili'Sweet</h2>
+          <div class="row">
+            <div class="col-3">
+                {% block horaires %}{% include 'partials/_horaires.html.twig' %}{% endblock %}            
+            </div>
+            <div class="col-3">
+                {% block maps %}{% include 'partials/_maps.html.twig' %}{% endblock %} 
+            </div>
+            <div class="col-6">
+              {% block apropos %}{% include 'partials/_liens.html.twig' %}{% endblock %}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      <!--FOOTER--> 
+      {% block footer %}{% include 'partials/_footer.html.twig' %}{% endblock %}
+     
+      <style>
+        body {
+          font-family: 'Roboto', sans-serif;
+          font-size: 14px;
+          color: #404040;
+          background: linear-gradient(0deg, #ffffff, #ffffff, #f7edf3 40%, #f8edef 50%, #ffffff, #ffffff);
+        }
+
+        .move {
+         position:relative;
+        }
+
+        .move img{
+          position:absolute;
+          left:-292px;
+        }
+
+        img #stars1 {
+          display: cover;
+        }
+
+        input::placeholder {
+          font-size: 12px;
+          color: silver
+        }
+
+        .btn {
+          border-radius: 60px;
+          border-color: #cc808e;
+          color: #bd5b6e;
+          transition: all 1s ease-out;
+        }
+        
+        .btn:hover {
+          background-color: #e9c8cf;
+          border-color: #cc808e;
+          visibility: visible;
+          opacity: 1;
+          transition: all 1s ease-in;
+        }
+
+        #section9 {
+          background-color: #B5538E;
+          font-size: 12px;
+          color: #DAA9C7;
+          padding: 10px 50px 114px 50px;
+          width: 100%;
+          position: absolute;
+        }
+
+        #section9 h2 {
+          font-family: 'Great Vibes', cursive;
+        }
+
+        #section9 a {
+          color:  silver;
+          text-decoration: none;
+        }
+
+        #section9 a:hover {
+          color: white;
+          text-decoration: none;
+          font-size: 12px;
+          font-weight:bold;
+        }
+
+        fieldset, legend {
+          all: revert;
+        }
+
+        fieldset {
+          border: solid 1px #e6c1c8;
+        }
+
+        legend {
+           font-weight: bold;
+           font-size: 15px;
+           text-transform: uppercase;
+           color:  #c46e7e;
+        }
+
+        .red {
+          color: red;
+        }
+
+        .titreSection {
+          color: #bd5b6e;
+          font-size: 45px;
+	        font-family: 'Julius Sans One', sans-serif;
+        }
+
+        .title-form {
+          color: white;
+	        -webkit-text-stroke: 1px #F8F8F8;
+	        text-shadow: 2px 2px 4px #bd5b6e;
+        }
+      </style>
+
+      <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}" crossorigin="anonymous"></script>
+      <script src="{{asset('assets/js/bootstrap.bundle.min.js.map')}}" crossorigin="anonymous"></script>
+      <script src="{{asset('assets/js/custom.js')}}" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+  </html>

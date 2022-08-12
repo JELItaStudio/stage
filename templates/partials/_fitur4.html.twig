@@ -1,0 +1,91 @@
+<!-- MARKETING - FITUR4 -->
+<div class="container-fluide">
+	<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    	<h1 class="display-4 fw-normal titreMarques">NOS MARQUES</h1>
+	</div>
+    <!-- MARQUES -->
+    <div class="row featurette" id="marques">
+		<div id="logos-home-page">
+			<div class="slider">
+				<div class="slide-track">
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/carambar.png')}}" alt="carambar" width="143" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/corazon.png')}}" alt="corazon" width="156" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/dulceplus.png')}}" alt="dulceplus" width="185" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/fanta.png')}}" alt="fanta" width="66" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/ferrero.png')}}" alt="ferrero" width="239" height="40" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/fini.png')}}" alt="fini" width="92" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/fundiez.png')}}" alt="fundiez" width="134" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/haribo.svg')}}" alt="haribo" width="168" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/kinder.png')}}" alt="kinder" width="145" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/toffifee.png')}}" alt="toffifee" width="145" height="50" /></div>	
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/carambar.png')}}" alt="carambar" width="143" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/corazon.png')}}" alt="corazon" width="156" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/dulceplus.png')}}" alt="dulceplus" width="185" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/fanta.png')}}" alt="fanta" width="66" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/ferrero.png')}}" alt="ferrero" width="239" height="40" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/fini.png')}}" alt="fini" width="92" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/fundiez.png')}}" alt="fundiez" width="134" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/haribo.svg')}}" alt="haribo" width="168" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/kinder.png')}}" alt="kinder" width="145" height="50" /></div>
+					<div class="slide"><img class="alignnone size-full wp-image-13024" src="{{asset('assets/img/marques/toffifee.png')}}" alt="toffifee" width="145" height="50" /></div>			
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	.titreMarques {
+	    color: #bd5b6e;
+	    font-size: 45px;
+		font-family: 'Julius Sans One', sans-serif;
+	}
+
+	/* Animation */
+	@keyframes scroll {
+		0% { transform: translateX(0); }
+		100% { transform: translateX(calc(-250px * 7))}
+	}
+
+
+	/*  Styling  */
+	#logos-home-page .slider {
+	    height: auto;
+	    margin: auto;
+	    overflow: hidden;
+	    position: relative;
+	    width: 100%;
+	}
+
+	#logos-home-page .slider:before,#logos-home-page .slider:after {
+		background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	#logos-home-page .slider:after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	#logos-home-page .slider:before {
+		left: 0;
+		top: 0;
+	}
+	#logos-home-page .slide-track {
+		animation: scroll 40s linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+	
+	#logos-home-page div.slide {
+    	padding: 0 12px;
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+	}
+</style>

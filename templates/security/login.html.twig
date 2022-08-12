@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion-Lili'Swee{% endblock %}
+
+{% block body %}
+
+<section id="connexion">
+    <div class="container-fluide">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-5 mt-3">
+                <form method="post">
+                    
+                    {% if error %}
+                        <div class="alert alert-danger red">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+
+                    {% if app.user %}
+                        <div class="mb-3" id="messageLogout">
+                            <span id="mL1">Vous êtes connecté(e) comme</span><span id="userIdentifier">{{ app.user.userIdentifier }}</span>, <a href="{{ path('app_logout')}}"><button class="btn btn-md btn-outline-danger">me déconnecter</button></a>
+                        </div>
+                    {% endif %}
+ 
+                    <h1 class="font-weight-normal title-form mb-1 mt-2 text-center">Connexion</h1>
+                    <label for="inputEmail">E-mail</label>
+                    <input type="email" placeholder="votremail@site.com" value="{{ last_username }}" name="email" id="inputEmail" class="form-control mb-3 mt-1" autocomplete="email" required autofocus>
+                    <label for="inputPassword">Mot de passe</label>
+                    <input type="password" placeholder="Saisissez votre mot de passe." name="password" id="inputPassword" class="form-control mb-3 mt-1" autocomplete="current-password" required>
+
+                    <input type="hidden" name="_csrf_token"
+                           value="{{ csrf_token('authenticate') }}"
+                    >
+
+                    <a>mot de passe oublié</a>
+
+    {#
+        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+    #}
+                    <div class="row mt-4 mb-3 justify-content-center">
+                        <div class="d-grid gap-2 col-5">
+                            <button href="{{path('app_login')}}" type="submit" class="btn btn-md btn-outline-danger mt-2 mb-4">me connecter</button>
+                        </div>
+                        <div class="d-grid gap-2 col-5">
+                            <a  href="{{path('app_register')}}" class="btn btn-md btn-outline-danger mt-2 mb-4">m'inscrire</a>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- end : col-5 -->
+        <div><!-- end : row -->
+    <div><!-- end : container-fluide -->
+</section>
+
+<style>
+    #mL1{
+        color: green;
+    }
+
+    #userIdentifier {
+        color: #B5538E;
+        font-weight: bold;
+    }
+
+    #messageLogout a {
+        color: #cc808e;
+        text-decoration: none;
+    }
+
+    #messageLogout a:hover {
+        font-weight: bold;
+    }
+</style>
+
+{% endblock %}

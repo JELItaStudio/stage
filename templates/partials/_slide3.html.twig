@@ -1,0 +1,55 @@
+<!-- CAROUSEL: SLIDE 3 -->
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="css_Slide3" style="padding-bottom:60px;">confiserie halal</h1>
+      <div class="row text-center">
+        <div class="d-grid gap-2 col-3 offset-3">
+          <a href="{{path('app_register')}}" class="btn btn-md btn-outline-danger">INSCRIPTION</a>
+        </div>
+        <div class="d-grid gap-2 col-3 text-start">
+          <a href="" class="btn btn-md btn-outline-danger">P R O M O</a>
+        </div>
+      </div>
+    </div><!-- the end of .col-12, slide 3 -->
+  </div><!-- the end of .row, slide 3 -->
+</div><!-- the end of .container, slide 3 -->
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Poppins');
+
+  @import url('https://fonts.googleapis.com/css?family=Acme');
+
+  #slide3 {
+    background: linear-gradient (#6d2c38, #f8edef);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Acme', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  .css_Slide3 {
+    color: #fff;
+    font-size: 8rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    transform: rotate(-20deg) skew(25deg);
+    animation: blur 5s ease-in-out infinite;
+  }
+
+  @keyframes blur {
+    0%, 100% {
+      transform: rotate(-20deg) skew(25deg) translate(0,0);
+      text-shadow: -5px 5px 0 rgba(0,0,0,.2);
+    }
+
+    50% {
+      transform: rotate(-20deg) skew(25deg) translate(50px, -50px);
+      text-shadow: -50px 50px 0 rgba(0,0,0,.2);
+      filter: blur(2px);
+    }
+  }
+</style>

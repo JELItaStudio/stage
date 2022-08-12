@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contacter-nous{% endblock %}
+
+{% block body %}
+
+<section id="contact">
+    <div class="container-fluide">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-5 mt-3">
+                {{ form_start(form) }}
+                <form method="post">
+
+                    {% for message in app.flashes('success') %}
+			            <div class="alert alert-success mt-4">
+				            {{ message }}
+			            </div>
+		            {% endfor %}
+
+                    <h1 class="font-weight-normal title-form mb-1 mt-2 text-center">Contact</h1>
+                    <div class="mt-2 mb-1">
+                        {{ form_row(form.lastname) }}
+                    </div>
+                    <div class="mt-2 mb-1">
+                        {{ form_row(form.firstname) }}
+                    </div>
+                    <div class="mt-2 mb-1">
+                        {{ form_row(form.email) }}
+                    </div>
+                    <div class="mt-2 mb-1">
+                        {{ form_row(form.subject) }}
+                    </div>
+                    <div class="mt-2 mb-1">
+                        {{ form_row(form.message) }}
+                    </div>
+                    <div class = "mt-2 mb-3 text-center">
+                        {{ form_row(form.submit) }}
+                    </div>
+                </form>
+                {{ form_end(form) }}
+            </div><!-- end : col-5 -->
+        <div><!-- end : row -->
+    <div><!-- end : container-fluide -->
+</section>
+
+{% endblock %}

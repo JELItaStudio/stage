@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Inscription-Lili'Sweet{% endblock %}
+
+{% block body %}
+
+<section id="inscription">
+    <div class="container-fluide">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-5 mt-3">
+                {{ form_start(registrationForm) }}
+                <form method="post">
+                    <h1 class="font-weight-normal title-form mb-1 mt-2 text-center">Inscription</h1>
+                        
+                        <fieldset>
+                         <legend class="mt-3 mb-2">IDENTITÉ</legend>
+                            <div class="mt-2 mb-1">
+                                {{ form_row(registrationForm.lastname) }}
+                            </div>
+                            <div class="mt-2 mb-1">
+                                {{ form_row(registrationForm.firstname) }}
+                            </div>
+                            <div class="mt-2 mb-1">
+                                {{ form_row(registrationForm.email) }}
+                            </div>
+                        </fieldset>
+                            
+                        <fieldset>
+                            <legend class="mt-3 mb-2">COORDONNÉES</legend>
+                            <div class="mt-2 mb-1">
+                                {{ form_row(registrationForm.address) }}
+                            </div>
+                            <div class="mt-2 mb-1">
+                                {{ form_row(registrationForm.zipcode) }}
+                            </div>
+                            <div class="mt-2 mb-1">
+                                {{ form_row(registrationForm.city) }}
+                            </div>
+                            <div class="mt-2 mb-1">
+                                {{ form_row(registrationForm.country) }}
+                            </div>
+                            <div class="mt-2 mb-1">
+                                {{ form_row(registrationForm.phone) }}
+                            </div>
+                        </fieldset>
+                            
+                        <fieldset>
+                            <legend class="mt-3">MOT de PASSE</legend><br>
+                            <div class="mb-1">
+                                {{ form_row(registrationForm.plainPassword, {
+                                    label: 'Password'
+                                    }) 
+                                }}
+                            </div>
+                            <div class="mt-2 mb-1">
+                            <div class="row">
+                            <div class="col-1 text-center">
+                                {{ form_widget(registrationForm.RGPDConsent) }}
+                            </div>
+                            <div class="col-11">
+                                {{ form_label(registrationForm.RGPDConsent) }}
+                            </div>
+                            </div>
+                            </div>
+                        </fieldset>
+                            
+
+                        <div class="row my-3">
+                      
+                            <div class="d-grid gap-2 col-6">
+                                <button  href="{{path('app_register')}}" type="submit" class="btn btn-md btn-outline-danger mt-2 mb-4">m'inscrire</button>
+                            </div>
+                            <div class="d-grid gap-2 col-6">
+                                    <a  href="{{path('app_login')}}" class="btn btn-md btn-outline-danger mt-2 mb-4">me connecter</a>
+                            </div>
+                          
+                        </div>
+                </form>
+                 {{ form_end(registrationForm) }}
+            </div><!-- end : col-5 -->
+        <div><!-- end : row -->
+    <div><!-- end : container-fluide -->
+</section>
+
+<style>
+    #mL1{
+        color: green;
+    }
+
+    #userIdentifier {
+        color: #B5538E;
+        font-weight: bold;
+    }
+
+    #messageLogout a {
+        color: #cc808e;
+        text-decoration: none;
+    }
+
+    #messageLogout a:hover {
+        font-weight: bold;
+    }
+</style>
+
+{% endblock %}

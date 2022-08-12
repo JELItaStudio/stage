@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-3">
+        <h6 class="ps-2">Mon compte</h6>
+            <ul class="ps-3">
+                <li><a href="{{path('app_login')}}">Connexion</a></li>
+                <li><a href="{{path('app_login')}}">Mot de passe</a></li>
+                <li><a href="{{path('app_login')}}">Mes commandes</a></li>
+            </ul><br>
+            
+    </div>
+    <div class="col-3">
+        <h6>A Propos</h6>
+            <ul class="ps-2">
+                <li><a href="{{path('app_login')}}">Catalogue</a></li>
+                <li><a href="https://www.lili-sweet.com/login">Modes de réglement</a></li>
+                <li><a href="https://www.lili-sweet.com/login">Donnes personnelles</a></li>
+                <li><a href="{{asset('assets/img/ml.png')}}"> Mention legale </a></li>
+    </div>
+    <div class="col-6 pe-0">
+        {% block reglement %}{% include 'partials/_reglement.html.twig' %}{% endblock %} 
+    </div>
+</div>
+     
+

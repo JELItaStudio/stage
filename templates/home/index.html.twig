@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Accueil-Lili'Sweet-Confiserie Halal{% endblock %}
+
+{% block annonces %}{% endblock %}
+{% block navbar %}{% endblock %}
+{% block carousel %}{% endblock %}
+{% block section9 %}{% endblock %}
+
+{% block body %}
+
+<div>
+  <!-- MARKETING FEATURES -->
+    {% block marketing1 %}{% include 'partials/_fitur1.html.twig' %}{% endblock %} 
+      
+  <hr class="featurette-divider">
+    {% block produits %}{% include 'partials/_fitur2.html.twig' %}{% endblock %} 
+ 
+  <hr class="featurette-divider">
+    {% block newarrivals %}{% include 'partials/_fitur3.html.twig' %}{% endblock %} 
+
+  <hr class="featurette-divider">
+    {% block marques %}{% include 'partials/_fitur4.html.twig' %}{% endblock %} 
+  
+  <hr class="featurette-divider">
+    {% block livraison %}{% include 'partials/_fitur5.html.twig' %}{% endblock %} 
+   
+  <!-- THE END OF THE MARKETING FEATURES -->
+</div>
+
+<style>
+  #carouselExampleIndicators {
+    background-color : #f8edef;
+  }
+  
+  .move {
+    position:relative;;
+  }
+  .move img{
+    position:absolute;
+    left:-240px;
+  }
+
+  .featurette-divider {
+    margin-top: 50px;
+    margin-bottom: 35px;
+  }
+</style>
+{% endblock %}

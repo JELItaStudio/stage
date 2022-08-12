@@ -1,0 +1,72 @@
+<!-- MARKETING - FITUR3 -->
+<div class="container-fluide">
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal titreFitur3">NOUVEAUX ARRIVAGES</h1><br>
+    <div class="newArrival">
+     <a><img src="{{asset('assets/img/fitur3/1.png')}}" alt=""></a>
+     <a><img src="{{asset('assets/img/fitur3/2.png')}}" alt=""></a>
+     <a><img src="{{asset('assets/img/fitur3/7.png')}}" alt=""></a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .titreFitur3 {
+    color: #c46e7e;
+    font-size: 46px;
+    font-family: 'Rubik Moonrocks', cursive;
+  }
+
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+
+  .newArrival {
+    position: relative;
+    width: 100px;
+    height: 400px;
+    margin-top: 0px;
+    text-align: center;
+    padding-bottom: 100px;
+  }
+
+  .newArrival >  a > img {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: calc(50% + 50px);
+    opacity: 0;
+    animation: display 6s infinite;
+  }
+
+  .newArrival a:nth-child(1) img {
+    animation-delay: 2s;
+  }
+
+   .newArrival a:nth-child(2) img {
+    animation-delay: 4s;
+  }
+
+ .newArrival a:nth-child(3) img {
+    animation-delay: 6s;
+  }
+</style>
